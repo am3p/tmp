@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{34B2AB2D-FE5B-4CD5-A6D3-EAF192623E01}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>odyssey</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ODYSSEY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>C:\ELSWORK\odyssey\odyssey.def</ModuleDefinitionFile>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ODYSSEY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>C:\ELSWORK\odyssey\odyssey.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AirbagStepDownB.cpp" />
+    <ClCompile Include="Barrier.cpp" />
+    <ClCompile Include="BarrierB.cpp" />
+    <ClCompile Include="Basic.cpp" />
+    <ClCompile Include="BinaryBarrier.cpp" />
+    <ClCompile Include="CliquetA.cpp" />
+    <ClCompile Include="Digital.cpp" />
+    <ClCompile Include="FRN.cpp" />
+    <ClCompile Include="HStepDownB.cpp" />
+    <ClCompile Include="LizardStepDownB.cpp" />
+    <ClCompile Include="mcPlain.cpp" />
+    <ClCompile Include="odyssey.cpp" />
+    <ClCompile Include="odysseyRandom.cpp" />
+    <ClCompile Include="Plain.cpp" />
+    <ClCompile Include="PlainB.cpp" />
+    <ClCompile Include="Plainq.cpp" />
+    <ClCompile Include="RStepUpA.cpp" />
+    <ClCompile Include="RStepUpCDA.cpp" />
+    <ClCompile Include="StabilityA.cpp" />
+    <ClCompile Include="StepDownA.cpp" />
+    <ClCompile Include="StepDownB.cpp" />
+    <ClCompile Include="StepDownBCB.cpp" />
+    <ClCompile Include="StepDownBCCDB.cpp" />
+    <ClCompile Include="StepDownC.cpp" />
+    <ClCompile Include="StepDownCDA.cpp" />
+    <ClCompile Include="StepDownCDB.cpp" />
+    <ClCompile Include="StepDownCDC.cpp" />
+    <ClCompile Include="StepDownCPA.cpp" />
+    <ClCompile Include="StepDownCPB.cpp" />
+    <ClCompile Include="StepDownCPC.cpp" />
+    <ClCompile Include="StepDownCPCDA.cpp" />
+    <ClCompile Include="StepDownCPCDB.cpp" />
+    <ClCompile Include="StepDownCPCDC.cpp" />
+    <ClCompile Include="StepDownCTB.cpp" />
+    <ClCompile Include="StepDownCTCDB.cpp" />
+    <ClCompile Include="TomA.cpp" />
+    <ClCompile Include="TomCDA.cpp" />
+    <ClCompile Include="TwoAssetDigital.cpp" />
+    <ClCompile Include="VBStepDownA.cpp" />
+    <ClCompile Include="VBStepDownB.cpp" />
+    <ClCompile Include="VBStepDownCDA.cpp" />
+    <ClCompile Include="VBStepDownCDB.cpp" />
+    <ClCompile Include="ZeroBond.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AirbagStepDownB.h" />
+    <ClInclude Include="Barrier.h" />
+    <ClInclude Include="BarrierB.h" />
+    <ClInclude Include="Basic.h" />
+    <ClInclude Include="BinaryBarrier.h" />
+    <ClInclude Include="CliquetA.h" />
+    <ClInclude Include="FRN.h" />
+    <ClInclude Include="HStepDownB.h" />
+    <ClInclude Include="LizardStepDownB.h" />
+    <ClInclude Include="mcPlain.h" />
+    <ClInclude Include="odysseyRandom.h" />
+    <ClInclude Include="Plain.h" />
+    <ClInclude Include="odyssey.h" />
+    <ClInclude Include="Digital.h" />
+    <ClInclude Include="PlainB.h" />
+    <ClInclude Include="Plainq.h" />
+    <ClInclude Include="RStepUpA.h" />
+    <ClInclude Include="RStepUpCDA.h" />
+    <ClInclude Include="StabilityA.h" />
+    <ClInclude Include="StepDownA.h" />
+    <ClInclude Include="StepDownB.h" />
+    <ClInclude Include="StepDownBCB.h" />
+    <ClInclude Include="StepDownBCCDB.h" />
+    <ClInclude Include="StepDownC.h" />
+    <ClInclude Include="StepDownCDA.h" />
+    <ClInclude Include="StepDownCDB.h" />
+    <ClInclude Include="StepDownCDC.h" />
+    <ClInclude Include="StepDownCPA.h" />
+    <ClInclude Include="StepDownCPB.h" />
+    <ClInclude Include="StepDownCPC.h" />
+    <ClInclude Include="StepDownCPCDA.h" />
+    <ClInclude Include="StepDownCPCDB.h" />
+    <ClInclude Include="StepDownCPCDC.h" />
+    <ClInclude Include="StepDownCTB.h" />
+    <ClInclude Include="StepDownCTCDB.h" />
+    <ClInclude Include="Thread.h" />
+    <ClInclude Include="TomA.h" />
+    <ClInclude Include="TomCDA.h" />
+    <ClInclude Include="TwoAssetDigital.h" />
+    <ClInclude Include="VBStepDownA.h" />
+    <ClInclude Include="VBStepDownB.h" />
+    <ClInclude Include="VBStepDownCDA.h" />
+    <ClInclude Include="VBStepDownCDB.h" />
+    <ClInclude Include="ZeroBond.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="odyssey.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
